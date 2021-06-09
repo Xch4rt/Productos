@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Productos.poco
 {
-    class Products
+    public class Products
     {
+        int id { get; set; }
+        string nombre { get; set; }
+        int nExistencia { get; set; }
+        string marca { get; set; }
+        string modelo { get; set; }
+        decimal precio { get; set; }
+
+        string desc { get; set; }
+        string img { get; set; }
     }
 }

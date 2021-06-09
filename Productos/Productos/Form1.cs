@@ -16,5 +16,26 @@ namespace Productos
         {
             InitializeComponent();
         }
+
+        private void txtNExistencias_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtModelo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImagen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+            int nExistencia = txtNExistencias.Value;
+        }
     }
 }

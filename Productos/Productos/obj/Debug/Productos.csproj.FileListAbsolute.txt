@@ -1,0 +1,12 @@
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\bin\Debug\Productos.exe.config
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\bin\Debug\Productos.exe
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\bin\Debug\Productos.pdb
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.csprojAssemblyReference.cache
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.Form1.resources
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.frmMdi.resources
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.frmViews.resources
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.Properties.Resources.resources
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.csproj.GenerateResource.cache
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.csproj.CoreCompileInputs.cache
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.exe
+D:\Ariel\Programacion 2\Pueba 1\Productos-main\Productos\Productos\obj\Debug\Productos.pdb
