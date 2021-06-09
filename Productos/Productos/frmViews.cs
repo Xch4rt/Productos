@@ -16,5 +16,10 @@ namespace Productos
         {
             InitializeComponent();
         }
+
+        private void frmViews_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

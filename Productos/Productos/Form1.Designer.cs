@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtNExistencias = new System.Windows.Forms.NumericUpDown();
+            this.npExistencia = new System.Windows.Forms.NumericUpDown();
             this.txtImagen = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -46,12 +46,12 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNExistencias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npExistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtNExistencias);
+            this.groupBox1.Controls.Add(this.npExistencia);
             this.groupBox1.Controls.Add(this.txtImagen);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -72,13 +72,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo producto";
             // 
-            // txtNExistencias
+            // npExistencia
             // 
-            this.txtNExistencias.Location = new System.Drawing.Point(166, 97);
-            this.txtNExistencias.Name = "txtNExistencias";
-            this.txtNExistencias.Size = new System.Drawing.Size(120, 20);
-            this.txtNExistencias.TabIndex = 28;
-            this.txtNExistencias.ValueChanged += new System.EventHandler(this.txtNExistencias_ValueChanged);
+            this.npExistencia.Location = new System.Drawing.Point(166, 97);
+            this.npExistencia.Name = "npExistencia";
+            this.npExistencia.Size = new System.Drawing.Size(120, 20);
+            this.npExistencia.TabIndex = 28;
+            this.npExistencia.ValueChanged += new System.EventHandler(this.txtNExistencias_ValueChanged);
             // 
             // txtImagen
             // 
@@ -216,9 +216,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNExistencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npExistencia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,7 +227,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown txtNExistencias;
+        private System.Windows.Forms.NumericUpDown npExistencia;
         private System.Windows.Forms.TextBox txtImagen;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtPrecio;

@@ -11,12 +11,9 @@ namespace Productos.Model
     {
         public Products[] productos;
 
-        public ProductoModel()
-        {
+        public ProductoModel(){ }
 
-        }
-
-        public void Añadir(Products pr)
+        public void Add(Products pr)
         {
             if (productos == null)
             {

@@ -30,11 +30,11 @@ namespace Productos
         private void InitializeComponent()
         {
             this.dgvProductos = new System.Windows.Forms.GroupBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dgvProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,21 @@ namespace Productos
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.TabStop = false;
             this.dgvProductos.Text = "Registro de prodcutos";
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(22, 38);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(737, 19);
+            this.txtFiltro.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(22, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(737, 207);
+            this.dataGridView1.TabIndex = 0;
             // 
             // btnAgregar
             // 
@@ -78,21 +93,6 @@ namespace Productos
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(737, 207);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // txtFiltro
-            // 
-            this.txtFiltro.Location = new System.Drawing.Point(22, 38);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(737, 19);
-            this.txtFiltro.TabIndex = 1;
-            // 
             // frmViews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +104,7 @@ namespace Productos
             this.Controls.Add(this.dgvProductos);
             this.Name = "frmViews";
             this.Text = "frmViews";
+            this.Load += new System.EventHandler(this.frmViews_Load);
             this.dgvProductos.ResumeLayout(false);
             this.dgvProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

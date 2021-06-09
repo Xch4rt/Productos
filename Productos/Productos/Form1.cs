@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Productos.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,54 @@ namespace Productos
 {
     public partial class Form1 : Form
     {
+        public ProductoModel productoModel { get; set; }
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            string msj = "Todo ok";
+            try
+            {
+                string nombre = isValid(txtNombre.Text)?txtNombre.Text:msj="Nombre";
+                string marca = isValid(txtMarca.Text)?txtMarca.Text:msj="Marca";
+                string modelo = isValid(txtModelo.Text)?txtModelo.Text:msj="Modelo";
+                decimal price = Convert.ToDecimal(txtPrecio.Text);
+                string description = isValid(txtDescripcion.Text)?txtDescripcion.Text:msj="Descripcion";
+                string urlImage = isValid(txtImagen.Text)?txtImagen.Text:msj="Imagen";
+                int nExistencia = (int)npExistencia.Value;
+                if (msj == "Todo ok")
+                {
+                    MessageBox.Show(msj);
+                }
+                else
+                {
+                    MessageBox.Show("Rellenar " + msj);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje de Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private Boolean isValid(string obj)
+        {
+            if (!string.IsNullOrEmpty(obj))
+                return true;
+            return false;
+        }
+
+        // ignorar abajo
         private void txtNExistencias_ValueChanged(object sender, EventArgs e)
         {
 
@@ -32,10 +76,8 @@ namespace Productos
 
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            string nombre = txtNombre.Text;
-            int nExistencia = txtNExistencias.Value;
-        }
+
+
+
     }
 }

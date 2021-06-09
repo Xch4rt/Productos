@@ -30,5 +30,10 @@ namespace Productos
             views.MdiParent = this;
             views.Show();
         }
+
+        private void frmMdi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

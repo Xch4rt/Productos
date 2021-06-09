@@ -31,15 +31,15 @@ namespace Productos
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.catalogoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.productoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.catalogoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.productoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,37 @@ namespace Productos
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // catalogoToolStripMenuItem1
+            // 
+            this.catalogoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productoToolStripMenuItem1});
+            this.catalogoToolStripMenuItem1.Name = "catalogoToolStripMenuItem1";
+            this.catalogoToolStripMenuItem1.Size = new System.Drawing.Size(67, 20);
+            this.catalogoToolStripMenuItem1.Text = "Catalogo";
+            // 
+            // productoToolStripMenuItem1
+            // 
+            this.productoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem,
+            this.visualizarToolStripMenuItem1});
+            this.productoToolStripMenuItem1.Name = "productoToolStripMenuItem1";
+            this.productoToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.productoToolStripMenuItem1.Text = "Producto";
+            // 
+            // registrarToolStripMenuItem
+            // 
+            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            // 
+            // visualizarToolStripMenuItem1
+            // 
+            this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.visualizarToolStripMenuItem1.Text = "Visualizar";
+            this.visualizarToolStripMenuItem1.Click += new System.EventHandler(this.visualizarToolStripMenuItem1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -80,45 +111,14 @@ namespace Productos
             // registrarProductoToolStripMenuItem
             // 
             this.registrarProductoToolStripMenuItem.Name = "registrarProductoToolStripMenuItem";
-            this.registrarProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarProductoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.registrarProductoToolStripMenuItem.Text = "Registrar ";
             // 
             // visualizarToolStripMenuItem
             // 
             this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.visualizarToolStripMenuItem.Text = "Visualizar";
-            // 
-            // catalogoToolStripMenuItem1
-            // 
-            this.catalogoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productoToolStripMenuItem1});
-            this.catalogoToolStripMenuItem1.Name = "catalogoToolStripMenuItem1";
-            this.catalogoToolStripMenuItem1.Size = new System.Drawing.Size(67, 20);
-            this.catalogoToolStripMenuItem1.Text = "Catalogo";
-            // 
-            // productoToolStripMenuItem1
-            // 
-            this.productoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.visualizarToolStripMenuItem1});
-            this.productoToolStripMenuItem1.Name = "productoToolStripMenuItem1";
-            this.productoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.productoToolStripMenuItem1.Text = "Producto";
-            // 
-            // registrarToolStripMenuItem
-            // 
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registrarToolStripMenuItem.Text = "Registrar";
-            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
-            // 
-            // visualizarToolStripMenuItem1
-            // 
-            this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.visualizarToolStripMenuItem1.Text = "Visualizar";
-            this.visualizarToolStripMenuItem1.Click += new System.EventHandler(this.visualizarToolStripMenuItem1_Click);
             // 
             // frmMdi
             // 
@@ -130,6 +130,7 @@ namespace Productos
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMdi";
             this.Text = "frmMdi";
+            this.Load += new System.EventHandler(this.frmMdi_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
