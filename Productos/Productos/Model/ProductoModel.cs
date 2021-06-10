@@ -35,8 +35,9 @@ namespace Productos.Model
         {
             return productos;
         }
-        public Products[] GetInfo()
+        public Products[] GetInfo()// metodo aun no desarrollado, necesito que solo imprima lo que me interese
         {
+            
             prs[0] = productos[0];
             /*prs[1] = productos[1];
             prs[2] = productos[2];

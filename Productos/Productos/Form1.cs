@@ -41,7 +41,7 @@ namespace Productos
                 int nExistencia = (int)npExistencia.Value;
 
 
-                if (msj == "Todo ok" && !(nExistencia == 0))
+                if (msj == "Todo ok" && !(nExistencia == 0)) // !nExistencia porque este no puede estar en 0
                 {
                     MessageBox.Show(msj);
 
@@ -76,7 +76,7 @@ namespace Productos
             }
         }
 
-        private Boolean isValid(string obj)
+        private Boolean isValid(string obj)// metodo para validar si esta vacio
         {
             if (!string.IsNullOrEmpty(obj))
                 return true;

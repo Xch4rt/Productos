@@ -33,10 +33,15 @@ namespace Productos
 
         private void visualizarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*frmViews views = new frmViews();
+            //Modificaciones aqu
+            /*
+             *  UCform es el formulario con un flow layout para mostrar las cards
+            */
+            UCform ucfrview = new UCform();
+            ucfrview.ProductoModel = ProductoModel;
+            ucfrview.MdiParent = this;
+            ucfrview.Show();
 
-            views.MdiParent = this;
-            views.Show();*/
         }
 
         private void frmMdi_Load(object sender, EventArgs e)

@@ -64,14 +64,12 @@ namespace Productos
             if (dgvDatos.Rows.Count == 0)
                 return;
 
-            List<Products> filtro = new List<Products>();
-            string Clave = txtFiltro.Text.ToUpper();
+            List<Products> filtro = new List<Products>();// Uso LIst para trabajar mas rapido utilizando el metodo Add
+            string Clave = txtFiltro.Text.ToUpper();//Obtenemos lo que haya en el txt
             foreach (Products pro in ProductoModel.GetAll())
             {
-                if (pro.nombre.ToUpper().Contains(Clave) 
-                    || pro.marca.ToUpper().Contains(Clave) || pro.modelo.ToUpper().Contains(Clave) 
-                    || (pro.precio + "").ToUpper().Contains(Clave) || (pro.nExistencia + "").ToUpper().Contains(Clave)
-                    )//|| pro.descripcion.ToUpper().Contains(Clave) || pro.imagen.ToUpper().Contains(Clave) (pro.id + "").ToUpper().Contains(Clave) || || (pro.existencia + "").ToUpper().Contains(Clave)
+                if (pro.nombre.ToUpper().Contains(Clave) || pro.marca.ToUpper().Contains(Clave) || pro.modelo.ToUpper().Contains(Clave) || (pro.precio + "").ToUpper().Contains(Clave) || (pro.nExistencia + "").ToUpper().Contains(Clave))
+                    // si existe OR existe lo otro, mostrar en tabla, utilizando ToUpper para evitar percances y compararlas en mayusq
                     filtro.Add(pro);
 
             }

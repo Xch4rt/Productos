@@ -22,3 +22,5 @@ C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Product
 C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Productos.csproj.CoreCompileInputs.cache
 C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Productos.exe
 C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Productos.pdb
+C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Productos.Card.resources
+C:\Users\Pablo\Desktop\productos\Productos\Productos\Productos\obj\Debug\Productos.UCform.resources
