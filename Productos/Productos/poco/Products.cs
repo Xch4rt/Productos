@@ -8,14 +8,14 @@ namespace Productos.poco
 {
     public class Products
     {
-        int id { get; set; }
-        string nombre { get; set; }
-        int nExistencia { get; set; }
-        string marca { get; set; }
-        string modelo { get; set; }
-        decimal precio { get; set; }
+        //public int id { get; set; }
+        public string nombre { get; set; }
+        public int nExistencia { get; set; }
+        public string marca { get; set; }
+        public string modelo { get; set; }
+        public decimal precio { get; set; }
 
-        string desc { get; set; }
-        string img { get; set; }
+        public string desc { get; set; }
+        public string img { get; set; }
     }
 }

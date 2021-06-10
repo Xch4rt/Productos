@@ -1,4 +1,5 @@
 ﻿using Productos.Model;
+using Productos.poco;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace Productos
 {
     public partial class Form1 : Form
     {
-        public ProductoModel productoModel { get; set; }
+        public ProductoModel productoModel;// { get; set; }
 
         public Form1()
         {
@@ -30,21 +31,39 @@ namespace Productos
             string msj = "Todo ok";
             try
             {
-                string nombre = isValid(txtNombre.Text)?txtNombre.Text:msj="Nombre";
-                string marca = isValid(txtMarca.Text)?txtMarca.Text:msj="Marca";
-                string modelo = isValid(txtModelo.Text)?txtModelo.Text:msj="Modelo";
+                string nombre = isValid(txtNombre.Text) ? txtNombre.Text : msj="Nombre";
+                string marca = isValid(txtMarca.Text) ? txtMarca.Text : msj="Marca";
+                string modelo = isValid(txtModelo.Text) ? txtModelo.Text : msj="Modelo";
                 decimal price = Convert.ToDecimal(txtPrecio.Text);
-                string description = isValid(txtDescripcion.Text)?txtDescripcion.Text:msj="Descripcion";
-                string urlImage = isValid(txtImagen.Text)?txtImagen.Text:msj="Imagen";
+                string description = isValid(txtDescripcion.Text) ? txtDescripcion.Text : msj="Descripcion";
+                string urlImage = isValid(txtImagen.Text) ? txtImagen.Text : msj="Imagen";
                 int nExistencia = (int)npExistencia.Value;
-                if (msj == "Todo ok")
+
+
+                if (msj == "Todo ok" && !(nExistencia == 0))
                 {
                     MessageBox.Show(msj);
+
+                    Products pr = new Products()
+                    {
+                        nombre = nombre,
+                        marca = marca,
+                        modelo = modelo,
+                        precio = price,
+                        desc = description,
+                        img = urlImage,
+                        nExistencia = nExistencia
+                    };
+                    
+                    productoModel = new ProductoModel();
+                    productoModel.Add(pr);//System.NullreferencException
                 }
                 else
                 {
                     MessageBox.Show("Rellenar " + msj);
                 }
+
+                
             }
             catch (Exception ex)
             {
