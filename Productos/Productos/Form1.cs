@@ -14,8 +14,9 @@ namespace Productos
 {
     public partial class Form1 : Form
     {
-        public ProductoModel productoModel;// { get; set; }
-
+        public ProductoModel ProductoModel{ get; set; }
+        public DataGridView dgvDatos { get; set; }
+        public frmViews frmViewss;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Productos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //productoModel = new ProductoModel();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -55,8 +56,11 @@ namespace Productos
                         nExistencia = nExistencia
                     };
                     
-                    productoModel = new ProductoModel();
-                    productoModel.Add(pr);//System.NullreferencException
+                    //productoModel = new ProductoModel();
+                    ProductoModel.Add(pr);//System.NullreferencException
+                    dgvDatos.DataSource = ProductoModel.GetAll();
+                    //MessageBox.Show($"Nombre: {pr.nombre}");
+                    //frmViewss.dataGridViews1
                 }
                 else
                 {
